@@ -1,0 +1,18 @@
+<div>
+	<%= form_for(@feedback, :as => 'feedback_form', :url => { :action => "create" }) do |f| %>
+
+	<ul>
+		<li><%= f.label :name %></li>
+		<li><%= f.text_field :name %></li>
+		<li><%= f.label :email %></li>
+		<li><%= f.text_field :email %></li>
+		<li><%= f.label :subject %></li>
+		<li><%= f.text_field :subject %></li>
+		<li><%= f.label :message %></li>
+		<li><%= f.text_field :message %></li>
+
+		<%= f.submit 'Send feedback' %>
+	</ul>
+
+	<% end %>
+</div>
