@@ -4,6 +4,7 @@ require 'spec_helper'
 require File.expand_path("../dummy/config/environment", __FILE__)
 require 'rspec/rails'
 require 'shoulda/matchers'
+require 'rspec/given'
 
 ActionMailer::Base.delivery_method = :test
 

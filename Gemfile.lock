@@ -43,6 +43,8 @@ GEM
       xpath (~> 2.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    given_core (3.5.4)
+      sorcerer (>= 0.3.7)
     hike (1.2.3)
     i18n (0.6.11)
     json (1.8.1)
@@ -75,11 +77,18 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.3.2)
+    rspec (3.0.0)
+      rspec-core (~> 3.0.0)
+      rspec-expectations (~> 3.0.0)
+      rspec-mocks (~> 3.0.0)
     rspec-core (3.0.3)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.0.0)
+    rspec-given (3.5.4)
+      given_core (= 3.5.4)
+      rspec (>= 2.12)
     rspec-mocks (3.0.3)
       rspec-support (~> 3.0.0)
     rspec-rails (3.0.1)
@@ -93,6 +102,7 @@ GEM
     rspec-support (3.0.3)
     shoulda-matchers (2.5.0)
       activesupport (>= 3.0.0)
+    sorcerer (1.0.2)
     sprockets (2.12.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -120,6 +130,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   feedback_mailer!
+  rspec-given
   rspec-rails
   shoulda-matchers
   sqlite3

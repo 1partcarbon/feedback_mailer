@@ -8,8 +8,12 @@ module FeedbackMailer
 
 		def create
 			feedback = FeedbackMailer::Feedback.new(params[:feedback_form])
-			FeedbackMailer::Mailer.feedback_form(feedback).deliver
-			redirect_to new_feedback_path, notice: "Feedback has been sent"
+			if feedback.valid?
+				FeedbackMailer::Mailer.feedback_form(feedback).deliver
+				redirect_to new_feedback_path, notice: "Feedback has been sent"
+			else
+				render :new
+			end
 		end
 
 
