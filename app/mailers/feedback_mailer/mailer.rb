@@ -1,6 +1,6 @@
 module FeedbackMailer
   class Mailer < ActionMailer::Base
-  	default to: "sdfgh@sdfgh.com"
+  	default to: APP_CONFIG['feedback_to_address']
 
     def feedback_form(feedback)
     	@feedback = feedback

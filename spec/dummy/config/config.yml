@@ -1,0 +1,11 @@
+defaults: &defaults
+  feedback_to_address: "totest@test.com"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

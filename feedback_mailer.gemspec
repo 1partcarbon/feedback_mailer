@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "rspec-given"
+  s.add_development_dependency "rspec-activemodel-mocks"
   s.add_development_dependency "capybara"
   s.add_development_dependency "shoulda-matchers"
 end

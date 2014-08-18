@@ -2,9 +2,15 @@ require 'rails_helper'
 
 
 describe FeedbackMailer::FeedbackController do
-	routes { FeedbackMailer::Engine.routes }
+		routes { FeedbackMailer::Engine.routes }
 
-	describe 'POST #create' do
+  describe "GET new" do
+    When { get :new }
+    Then { expect(assigns[:feedback]).not_to be_nil }
+  end
+
+
+	describe 'POST create' do
 		Given { ActionMailer::Base.deliveries.clear }
 		Given(:feedback_params) do
 			{
@@ -35,4 +41,5 @@ describe FeedbackMailer::FeedbackController do
 
 		end
 	end
+
 end

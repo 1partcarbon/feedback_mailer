@@ -13,6 +13,8 @@ require "feedback_mailer"
 
 module Dummy
   class Application < Rails::Application
+
+    #AppConfig.feedback_to_address = "toaddress@test.com"
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
