@@ -1,18 +1,41 @@
-<div>
-	<%= form_for(@feedback, :as => 'feedback_form', :url => { :action => "create" }) do |f| %>
+<h2>Feedback</h2>
 
-	<ul>
-		<li><%= f.label :name %></li>
-		<li><%= f.text_field :name %></li>
-		<li><%= f.label :email %></li>
-		<li><%= f.text_field :email %></li>
-		<li><%= f.label :subject %></li>
-		<li><%= f.text_field :subject %></li>
-		<li><%= f.label :message %></li>
-		<li><%= f.text_field :message %></li>
+<div>
+
+	 <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+
+
+	<p>Many thanks for taking the time to give us your feedback.</p>
+
+	<p>Constructive feedback, both postive and negative, is invaluable to the future development
+    and direction of this application. Please supply as much detail as you can along with the
+    context of what you were attempting at the time.</p>
+
+
+	<%= form_for(@feedback, :as => 'feedback_form', :url => { :action => "create" }) do |f| %>
+	<% if @feedback.errors.any? %>
+		<p>The feedback you have provided has the following errors: </p>
+		<ul>
+			<% @feedback.errors.full_messages.each do |msg| %>
+	      <li><%= msg %></li>
+	    <% end %>
+    </ul>
+  <% end %>
+
+	
+		<%= f.label :name %><br>
+		<%= f.text_field :name %><br>
+		<%= f.label :email %><br>	
+		<%= f.text_field :email %><br>
+		<%= f.label :subject %><br>
+		<%= f.text_field :subject %><br>
+		<%= f.label :message %><br>
+		<%= f.text_area :message, rows: 20, cols: 40 %><br>
 
 		<%= f.submit 'Send feedback' %>
-	</ul>
+	
 
 	<% end %>
 </div>

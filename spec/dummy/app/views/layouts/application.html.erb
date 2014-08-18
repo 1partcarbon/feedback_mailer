@@ -4,9 +4,11 @@
   <title>Dummy</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "feedback_mailer/application.css" %>
+  <%= stylesheet_link_tag "feedback_mailer/style.css" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body>	
 <%= feedback_link %>
 <h1>Test Feedback App</h1>
 <%= yield %>
