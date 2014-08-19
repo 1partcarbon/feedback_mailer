@@ -34,10 +34,10 @@ The engine's stylesheet must also be added into the application.html.erb like so
 
 ##Overriding the default settings
 
-The address which the feedback is sent from is set in the application config files. In order to set this up the following line must be added into the relevant config file:
+The address which the feedback is sent from is set in the environment config files. In order to set this up the following line must be added into the relevant environment file (eg test.rb):
 
 ```ruby
-  feedback_to_address: [your address here]
+  config.action_mailer.default_options = {to: [Your address here]}
 ```
 
 To override the css, an additional directory must be created in `app/assets/stylesheets`. Create a directory called `feedback_mailer` and inside that folder create a file called `application.css`. This file will be used in the place of the engine's .css file. There are only three elements with styling in the css that need to be overridden: `.feedback_link`, `a.feedback_link` and `a.feedback_link:hover`. This .css file can be used to create additional styling for the form if required.
