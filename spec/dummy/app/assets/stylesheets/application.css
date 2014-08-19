@@ -12,6 +12,12 @@
  *
  *= require_tree .
  *= require_self
- *= require feedback_mailer/style
  */
+
+
+.feedback_submit{
+  color: red;
+}
+
+
 

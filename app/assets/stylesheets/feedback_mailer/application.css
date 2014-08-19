@@ -49,7 +49,7 @@ a.feedback_link:hover {
   background: #00337f;
 }
 
-.modal.fade .modal-dialog {
+/*.modal.fade .modal-dialog {
  -webkit-transition: -webkit-transform .3s ease-out;
     -moz-transition:    -moz-transform .3s ease-out;
       -o-transition:      -o-transform .3s ease-out;
@@ -144,5 +144,6 @@ a.feedback_link:hover {
 @media (min-width: 992px) {
  .modal-lg {
    width: 900px;
- }
+ } 
 }
+*/

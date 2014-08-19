@@ -15,7 +15,7 @@ describe FeedbackMailer::Mailer do
  
     it 'renders the receiver email' do
       expect(mail.to).to eql(['totest@test.com'])
-    encoded*
+    end
  
     it 'renders the sender email' do
       expect(mail.from).to eql(['testemail@test.com' ])

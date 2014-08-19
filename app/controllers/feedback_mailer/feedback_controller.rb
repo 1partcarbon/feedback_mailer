@@ -1,7 +1,7 @@
 require_dependency "feedback_mailer/application_controller"
 
 module FeedbackMailer
-	class FeedbackController < ApplicationController
+	class FeedbackController < ::ApplicationController
 		def new
 			@feedback = FeedbackMailer::Feedback.new			
 		end
