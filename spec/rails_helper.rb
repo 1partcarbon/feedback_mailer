@@ -2,6 +2,7 @@
 ENV["RAILS_ENV"] ||= 'test'
 require 'spec_helper'
 require File.expand_path("../dummy/config/environment", __FILE__)
+require 'minitest/autorun'
 require 'rspec/rails'
 require 'rspec/active_model/mocks'
 require 'shoulda/matchers'

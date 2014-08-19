@@ -7,18 +7,19 @@ require "feedback_mailer/version"
 Gem::Specification.new do |s|
   s.name        = "feedback_mailer"
   s.version     = FeedbackMailer::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of FeedbackMailer."
-  s.description = "TODO: Description of FeedbackMailer."
+  s.authors     = ["Ricky Dalziel, Teng Li"]
+  s.email       = ["ricky@1partcarbon.co.uk, "]
+  s.homepage    = "www.1partcarbon.co.uk"
+  s.summary     = "Feedback engine"
+  s.description = "Engine to allow feedback emailing functionality to be plugged into applications"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
-  s.add_dependency "rails", "~> 4.1.4"
+  s.add_dependency "rails", "~> 4.1.5"
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "minitest"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "rspec-given"
   s.add_development_dependency "rspec-activemodel-mocks"

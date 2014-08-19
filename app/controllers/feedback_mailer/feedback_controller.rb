@@ -11,7 +11,7 @@ module FeedbackMailer
 			if @feedback.valid?
 				FeedbackMailer::Mailer.feedback_form(@feedback).deliver
 
-				flash[:notice] = 'Feedback successfully sent'
+				flash[:notice] = t(:feedback_success)
 				redirect_to new_feedback_path
 			else
 				render :new

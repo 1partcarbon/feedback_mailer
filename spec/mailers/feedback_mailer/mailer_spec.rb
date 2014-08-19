@@ -14,7 +14,7 @@ describe FeedbackMailer::Mailer do
     end
  
     it 'renders the receiver email' do
-      expect(mail.to).to eql(['totest@test.com'])
+      expect(mail.to).to eql(['no-reply@example.com'])
     end
  
     it 'renders the sender email' do

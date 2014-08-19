@@ -9,7 +9,7 @@ This engine is used for users to give feedback about the application it is used 
 First the engine needs to be mounted in routes.rb:
 
 ```ruby
-	mount FeedbackMailer::Engine => "/feedback_mailer"
+  mount FeedbackMailer::Engine => "/feedback_mailer"
 ```
 
 ##How to add the feedback link
@@ -17,13 +17,13 @@ First the engine needs to be mounted in routes.rb:
 A link helper has been created to generate the relevant links, for this to work, the following line needs to be added to the ApplicationController
 
 ```ruby
-	helper FeedbackMailer::FeedbackLinkHelper
+  helper FeedbackMailer::FeedbackLinkHelper
 ```
 
 From here the following erb can be used in the application.html.erb (or wherever you like) to generate the feedback link:
 
 ```ruby
-	<%= feedback_link %>
+  <%= feedback_link %>
 ```
 
 The engine's stylesheet must also be added into the application.html.erb like so
@@ -37,9 +37,7 @@ The engine's stylesheet must also be added into the application.html.erb like so
 The address which the feedback is sent from is set in the application config files. In order to set this up the following line must be added into the relevant config file:
 
 ```ruby
-	feedback_to_address: [your address here]
+  feedback_to_address: [your address here]
 ```
 
 To override the css, an additional directory must be created in `app/assets/stylesheets`. Create a directory called `feedback_mailer` and inside that folder create a file called `application.css`. This file will be used in the place of the engine's .css file. There are only three elements with styling in the css that need to be overridden: `.feedback_link`, `a.feedback_link` and `a.feedback_link:hover`. This .css file can be used to create additional styling for the form if required.
-
-

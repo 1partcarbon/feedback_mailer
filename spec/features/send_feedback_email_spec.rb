@@ -13,7 +13,7 @@ feature "Send Feedback Email" do
   	fill_in "Subject", with: "subject text"
   	fill_in "Message", with: "Message text"
 
-  	click_button "Send feedback"
+  	click_button "Submit feedback"
 
 
     expect(ActionMailer::Base.deliveries.length).to eql 1
