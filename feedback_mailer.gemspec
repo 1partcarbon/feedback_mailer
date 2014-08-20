@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.name        = "feedback_mailer"
   s.version     = FeedbackMailer::VERSION
   s.authors     = ["Ricky Dalziel, Teng Li"]
-  s.email       = ["ricky@1partcarbon.co.uk, "]
+  s.email       = ["ricky@1partcarbon.co.uk, teng@1partcarbon.co.uk"]
   s.homepage    = "www.1partcarbon.co.uk"
   s.summary     = "Feedback engine"
   s.description = "Engine to allow feedback emailing functionality to be plugged into applications"
