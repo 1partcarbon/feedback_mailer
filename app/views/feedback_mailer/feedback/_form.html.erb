@@ -1,0 +1,29 @@
+<p><%=t 'feedback_mailer.feedback_intro_1' %></p>
+
+  <p><%=t 'feedback_mailer.feedback_intro_2' %></p>
+
+
+    <%= form_for(@feedback, :as => 'feedback_form', :url => { :action => "create" }, remote: true, id: 'feedback_form') do |f| %>
+    <% if @feedback.errors.any? %>
+    <p><%=t 'feedback_mailer.feedback_errors' %></p>
+    <ul>
+     <% @feedback.errors.full_messages.each do |msg| %>
+     <li><%= msg %></li>
+     <% end %>
+   </ul>
+   <% end %>
+
+
+   <%= f.label :name %><br>
+   <%= f.text_field :name %><br>
+   <%= f.label :email %><br>  
+   <%= f.text_field :email %><br>
+   <%= f.label :subject %><br>
+   <%= f.text_field :subject %><br>
+   <%= f.label :message %><br>
+   <%= f.text_area :message, rows: 10, cols: 40 %><br>
+
+   <%= f.submit t 'feedback_mailer.feedback_submit', class: 'feedback_submit' %>
+
+
+   <% end %>

@@ -22,7 +22,7 @@
   top: 40%;
 }
 
-a.feedback_link {
+p.feedback_link {
   display: block;
   background: #2a64b0;
   height: 15px;
@@ -41,8 +41,26 @@ a.feedback_link {
   -webkit-transform: rotate(-90deg);
 }
 
-a.feedback_link:hover {
+p.feedback_link:hover {
   background: #00337f;
 }
+
+.feedback_form_container { 
+  visibilty: hidden;  
+}
+
+.feedback_form_container.open {
+  position: fixed;
+  background: #2a64b0;
+  color: #ffffff;
+  left: 0px;
+  top:20%;
+  border-bottom: solid 1px #333;
+  border-left: solid 1px #333;
+  border-right: solid 1px #fff;
+  width: 400px;
+  padding: 8px 16px; 
+}
+
 
 

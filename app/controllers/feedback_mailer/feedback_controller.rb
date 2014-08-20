@@ -3,7 +3,8 @@ require_dependency "feedback_mailer/application_controller"
 module FeedbackMailer
 	class FeedbackController < ::ApplicationController
 		def new
-			@feedback = FeedbackMailer::Feedback.new			
+			@feedback = FeedbackMailer::Feedback.new
+			render partial: 'form'			
 		end
 
 		def create
@@ -12,9 +13,9 @@ module FeedbackMailer
 				FeedbackMailer::Mailer.feedback_form(@feedback).deliver
 
 				flash[:notice] = t(:feedback_success)
-				redirect_to new_feedback_path
+				render partial: 'success'
 			else
-				render :new
+				render partial: 'form'
 			end
 		end
 

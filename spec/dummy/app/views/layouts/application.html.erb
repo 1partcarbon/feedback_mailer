@@ -5,12 +5,16 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag "feedback_mailer/application.css" %>
+  <%= javascript_include_tag 'feedback_mailer/application.js' %>
   <%= csrf_meta_tags %>
 
 </head>
 <body>	
-<%= feedback_link %>
-<h1><%= t :title %></h1>
-<%= yield %>
+
+  <%= feedback_link %>
+  <div class='feedback_form_container'> </div>
+
+  <h1><%= t :title %></h1>
+  <%= yield %>
 </body>
 </html>
