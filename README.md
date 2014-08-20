@@ -1,7 +1,5 @@
 #FeedbackMailer
 
-This project rocks and uses MIT-LICENSE.
-
 ##Using the mailer
 
 This engine is used for users to give feedback about the application it is used in. No data is stored to the database, an email is sent to a specified address. This engine consists of a helper to generate the feedback link, a form for the users to fill in, a model object for the feedback and a controller for the feedback to be sent.

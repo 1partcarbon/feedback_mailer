@@ -1,0 +1,56 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  activemodel:
+    errors:
+      models:
+        feedback_mailer/feedback:
+          attributes:
+            email:
+              invalid: "Format of the email is invalid, must be in the format example@test.com"
+    attributes:
+      feedback_mailer/feedback:
+        name: "Name"
+        subject: "Subject"
+        email: "Email"
+        message: "Message"
+
+  feedback_mailer:
+    #Form 
+    feedback_success: "Feedback successfully sent"
+    feedback_errors: "The feedback you have provided has the following errors: "
+    feedback_submit: "Submit feedback"
+
+    #General 
+    feedback: "Feedback"
+    feedback_intro_1: "Many thanks for taking the time to give us your feedback."
+    feedback_intro_2: "Constructive feedback, both postive and negative, is invaluable to the future development
+      and direction of this application. Please supply as much detail as you can along with the
+      context of what you were attempting at the time."
+
+
+
+  
+
+
+
+
