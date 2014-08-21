@@ -2,7 +2,7 @@ require_dependency "feedback_mailer/application_controller"
 
 module FeedbackMailer
   class FeedbackController < ::ApplicationController
-    layout -> (controller) { controller.request.xhr? ? false : nil }
+    layout ->(controller) { controller.request.xhr? ? false : nil }
 
     respond_to :html, :js 
 
