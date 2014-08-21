@@ -23,7 +23,7 @@ describe FeedbackMailer::FeedbackController do
 		end
 		When {post :create, feedback_form: feedback_params, :use_route => :feedback_mailer}
 
-		Then { expect(response).to redirect_to new_feedback_path }
+		Then { expect(response).to render_template(:success) }
 		And { ActionMailer::Base.deliveries.count == 1}
 
 		context 'if form is invalid' do

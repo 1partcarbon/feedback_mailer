@@ -8,6 +8,7 @@ require 'i18n'
 require 'rspec/active_model/mocks'
 require 'shoulda/matchers'
 require 'rspec/given'
+require 'jquery-rails' 
 
 ActionMailer::Base.delivery_method = :test
 

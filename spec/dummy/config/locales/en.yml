@@ -22,5 +22,10 @@
   en:
     title: "Test Feedback"
 
+    activemodel:
+      attributes:
+        feedback_mailer/feedback:
+          name: "Name"
+
 
 

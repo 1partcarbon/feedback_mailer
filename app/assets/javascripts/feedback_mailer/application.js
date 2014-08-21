@@ -9,23 +9,30 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
-//
-//= require_tree .
 //= require jquery
-//= require jquery_ujs
-$( document ).ready(function(){
-  $('.feedback_link').click(function () {
-    $.get("/feedback_mailer/feedback/new",  
-      function(data){ 
-        $('.feedback_form_container').html(data); 
-        $('.feedback_form_container').addClass('open')
-      }, 
-      "html"); 
-    // $('.feedback_form_container').reveal();
-    $('.feedback_link').hide(); 
-  });
+//= require jquery_ujs 
+//= require_tree .
 
-  $('.feedback_form_container').on("ajax:success", function(event, xhr, data, status) {
-    $('.feedback_form_container').html(xhr); 
-  });
-});
+
+
+
+// $( document ).ready(function(){
+//   $('.feedback_link').click(function () {
+//     $.get("/feedback_mailer/feedback/new",  
+//       function(data){ 
+//         $('.feedback_form_container').html(data); 
+//         $('.feedback_form_container').addClass('open')
+//       }, 
+//       "html"); 
+//     // $('.feedback_form_container').reveal();
+//     $('.feedback_link').hide(); 
+//     return false;
+//   });
+
+
+//   $('.feedback_form_container').on("ajax:success", function(event, xhr, data, status) {
+//     $('.feedback_form_container').html(xhr); 
+//   });
+// });
+
+

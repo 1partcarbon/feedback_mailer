@@ -1,6 +1,7 @@
 require "rails_helper"
 
 feature "Send Feedback Email" do
+  @javascript
   scenario "User Sends Feedback" do
   	ActionMailer::Base.deliveries.clear
     
