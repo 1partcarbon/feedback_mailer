@@ -1,7 +1,7 @@
 # Set RAILS_ROOT and load the environment if it's not already loaded.
 unless defined?(Rails)
-  ENV["RAILS_ROOT"] = File.expand_path("../../", __FILE__)
-  require File.expand_path("../../config/environment", __FILE__)
+  ENV["RAILS_ROOT"] = File.expand_path("../dummy", __FILE__)
+  require File.expand_path("../dummy/config/environment", __FILE__)
 end
 
 Teaspoon.configure do |config|
@@ -13,7 +13,7 @@ Teaspoon.configure do |config|
   # Specifies the root where Teaspoon will look for files. If you're testing an engine using a dummy application it can
   # be useful to set this to your engines root (e.g. `Teaspoon::Engine.root`).
   # Note: Defaults to `Rails.root` if nil.
-    config.root = FeedbackMailer::Engine.root
+  config.root = FeedbackMailer::Engine.root
 
   # Paths that will be appended to the Rails assets paths
   # Note: Relative to `config.root`.

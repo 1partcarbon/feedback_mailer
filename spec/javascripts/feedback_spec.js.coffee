@@ -1,25 +1,25 @@
-#=require feedback_mailer/feedback
-#=require jquery
-#=require jquery_ujs
+describe 'Feedback Form', ->
 
-describe 'feedback', ->
-  berforeEach ->
-    loadFixtures('feedback_form')
-
+  beforeEach ->
+   this.fixtures = fixture.load('feedback_form.html', true)
 
   describe "My great feature", ->
-    it "will change the world", ->
-      expect(true).toBe true
-      expect(jQuery).toBeDefined()
+   it "will change the world", ->
+     expect(true).toBe true
+     expect($).toBeDefined()
 
   describe 'when clicking the feedback link', ->
-    it 'the feedback form be assigned class open', ->
-      expect( $('.feedback_form_container')).toHaveClass('open')
+   it 'the feedback form be assigned class open', ->
+     $('.feedback_link').click()
+     container = $('.feedback_popout')
+     expect(container).toHaveClass('feedback_popout open')
 
   describe 'when clicking the feedback link', ->
-    it 'hides the feedback link', ->
-      expect( $('.feedback_link') ).toBeHidden()
+   it 'hides the feedback link', ->
+    $('.feedback_link').click()
+    expect($('.feedback_link') ).toBeHidden()
 
   describe 'when clicking the feedback link', ->
-    it 'displays the feedback form', ->
-      expect( $('.feedback_form_container') ).toBeVisible()
+   it 'displays the feedback form', ->
+    $('.feedback_link').click()
+    expect($('.feedback_popout') ).toBeVisible()

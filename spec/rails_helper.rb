@@ -9,8 +9,9 @@ require 'rspec/active_model/mocks'
 require 'shoulda/matchers'
 require 'rspec/given'
 require 'jquery-rails'
-require 'jasmine'
-require 'teaspoon'
+require 'jasmine-rails'
+require 'jasmine-jquery-rails'
+
 
 # require 'jasminerice', github: 'bradphelan/jasminerice'
 
