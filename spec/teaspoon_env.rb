@@ -13,7 +13,7 @@ Teaspoon.configure do |config|
   # Specifies the root where Teaspoon will look for files. If you're testing an engine using a dummy application it can
   # be useful to set this to your engines root (e.g. `Teaspoon::Engine.root`).
   # Note: Defaults to `Rails.root` if nil.
-    config.root = FeedbackMailer::Engine.root
+  #config.root = nil
 
   # Paths that will be appended to the Rails assets paths
   # Note: Relative to `config.root`.
