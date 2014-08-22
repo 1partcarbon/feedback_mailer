@@ -58,21 +58,51 @@ a.feedback_link:hover {
 }
 
 .feedback_popout.hidden{
+
   display: none;
+
 }
 
-.feedback_popout.open {
+.feedback_popout.animatedHidden{
   position: fixed;
   background: #2a64b0;
   color: #ffffff;
-  left: 0px;
-  top:20%;
+/*  left: 0px;
+  top:20%;*/
   border-bottom: solid 1px #333;
   border-left: solid 1px #333;
   border-right: solid 1px #fff;
   width: 400px;
   padding: 8px 16px; 
   font-family: Arial, sans-serif;
+
+  -webkit-animation: popoutAnimationHidden 0.5s linear forwards; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: normal;
+  animation: popoutAnimationHidden 0.5s linear forwards;
+  animation-direction: normal;
+
+
+}
+
+.feedback_popout.open {
+  position: fixed;
+  background: #2a64b0;
+  color: #ffffff;
+/*  left: 0px;
+  top:20%;*/
+  border-bottom: solid 1px #333;
+  border-left: solid 1px #333;
+  border-right: solid 1px #fff;
+  width: 400px;
+  padding: 8px 16px; 
+  font-family: Arial, sans-serif;
+
+
+
+  -webkit-animation: popoutAnimation 1s forwards; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: normal; /* Chrome, Safari, Opera */
+  animation: popoutAnimation 1s forwards;
+  animation-direction: normal;
 
 }
 
@@ -83,5 +113,30 @@ a.feedback_link:hover {
 }
 
 
+/* Chrome, Safari, Opera */
+@-webkit-keyframes popoutAnimation {
+    0%   { left:-400px; top:15%;}
+    100% { left:0px; top:15%;}
 
+}
+
+
+@-webkit-keyframes popoutAnimationHidden {
+    0%   { left:0px; top:15%;}
+    100% { left:-440px; top:15%;}
+
+}
+
+
+
+/*@keyframes popoutAnimation {
+    0%   {background:red; left:0px; top:0px;}
+    25%  {background:yellow; left:200px; top:0px;}
+    50%  {background:blue; left:200px; top:200px;}
+    75%  {background:green; left:0px; top:200px;}
+    100% {background:red; left:0px; top:0px;}
+}
+
+
+*/
 
