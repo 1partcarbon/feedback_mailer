@@ -1,17 +1,20 @@
 $(document).ready ->
- $(".feedback_link").click ->
+  $(".feedback_link").click ->
    $.get "/feedback_mailer/feedback/new", ((data) ->
      $(".feedback_form_container").html data
-     $(".feedback_form_container").addClass "open"
+     $(".feedback_popout").removeClass "hidden"
+     $(".feedback_popout").addClass "open"
      return
    ), "html"
    
-   # $('.feedback_form_container').reveal();
    $(".feedback_link").hide()
    false
 
- $(".feedback_form_container").on "ajax:success", (event, xhr, data, status) ->
+  $(".feedback_form_container").on "ajax:success", (event, xhr, data, status) ->
    $(".feedback_form_container").html xhr
    return
-
+  $(".feedback_popout_close").click ->
+    $(".feedback_popout").removeClass "open"
+    $(".feedback_popout").addClass "hidden"
+    $(".feedback_link").show()
  return

@@ -49,9 +49,19 @@ a.feedback_link:hover {
 
 .feedback_form_container { 
   visibilty: hidden;  
+
 }
 
 .feedback_form_container.open {
+  
+  
+}
+
+.feedback_popout.hidden{
+  display: none;
+}
+
+.feedback_popout.open {
   position: fixed;
   background: #2a64b0;
   color: #ffffff;
@@ -65,6 +75,13 @@ a.feedback_link:hover {
   font-family: Arial, sans-serif;
 
 }
+
+.feedback_popout_close {
+  float: right;
+  cursor: hand;
+  cursor: pointer;
+}
+
 
 
 
