@@ -7,14 +7,19 @@ $(document).ready ->
      return
    ), "html"
    
-   $(".feedback_link").hide()
+   $(".feedback_link").fadeOut()
    false
 
   $(".feedback_form_container").on "ajax:success", (event, xhr, data, status) ->
    $(".feedback_form_container").html xhr
+
+
+   
    return
+
   $(".feedback_popout_close").click ->
     $(".feedback_popout").removeClass "open"
-    $(".feedback_popout").addClass "hidden"
-    $(".feedback_link").show()
+    $(".feedback_popout").addClass "animatedHidden"
+    $(".feedback_link").fadeIn()
+
  return
