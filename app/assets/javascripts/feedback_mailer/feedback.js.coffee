@@ -15,8 +15,3 @@ $(document).ready ->
    return
 
  return
-
-
-     # $.get(url, params, (response)->
-     #        markerUsername(response)
-     #    , "json")

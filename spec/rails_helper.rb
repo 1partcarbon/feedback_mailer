@@ -8,7 +8,11 @@ require 'i18n'
 require 'rspec/active_model/mocks'
 require 'shoulda/matchers'
 require 'rspec/given'
-require 'jquery-rails' 
+require 'jquery-rails'
+require 'jasmine'
+require 'teaspoon'
+
+# require 'jasminerice', github: 'bradphelan/jasminerice'
 
 ActionMailer::Base.delivery_method = :test
 
